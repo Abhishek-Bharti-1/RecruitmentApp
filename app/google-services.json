@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "886209242718",
+    "project_id": "recruitmentapp-da180",
+    "storage_bucket": "recruitmentapp-da180.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:886209242718:android:68cd7db7e7b6f4cfbff6cf",
+        "android_client_info": {
+          "package_name": "com.androrubin.recruitmentApp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "886209242718-4mv2jjrnln5lum1cub05420c3sd39rd8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.androrubin.recruitmentApp",
+            "certificate_hash": "144fbab301384733907202965df1ed8e1782f2fc"
+          }
+        },
+        {
+          "client_id": "886209242718-gd5dvv7pclne05lkbdr8234v9egigf5t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPJG1f9xfKB7c5SHvHd9WJ5-pVu3rWhEk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "886209242718-gd5dvv7pclne05lkbdr8234v9egigf5t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

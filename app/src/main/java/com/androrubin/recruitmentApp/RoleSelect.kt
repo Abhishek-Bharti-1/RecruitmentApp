@@ -28,7 +28,9 @@ class RoleSelect : AppCompatActivity() {
         seekerBtn.setOnClickListener {
 
             val data = hashMapOf(
-                "Role" to "Job Seeker"
+                "Role" to "Job Seeker",
+                "LinkProfilePic" to "",
+                "LinkBannerPic" to ""
             )
             db.collection("Users").document("$name")
                 .set(data)

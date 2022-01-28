@@ -2,7 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.androrubin.recruitmentApp">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -12,17 +13,23 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RecruitmentApp">
         <activity
-            android:name=".RecruiterDetail"
-            android:label="Recruiter Detail"
+            android:name=".UploadPhoto"
             android:exported="false" />
+        <activity
+            android:name=".SeekerProfileView"
+            android:exported="false" />
+        <activity
+            android:name=".RecruiterDetail"
+            android:exported="false"
+            android:label="Recruiter Detail" />
         <activity
             android:name=".SeekerDetail"
-            android:label="Seeker Detail"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Seeker Detail" />
         <activity
             android:name=".RoleSelect"
-            android:label="Select a Role"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Select a Role" />
         <activity
             android:name=".Login_Activity"
             android:exported="false" />

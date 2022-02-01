@@ -35,6 +35,7 @@ import com.google.firebase.firestore.*
                              //Returns value of corresponding field
                              var a = it["Role"].toString()
 
+
                              if (a== "Recruiter") {
 
 
@@ -49,7 +50,6 @@ import com.google.firebase.firestore.*
                                  finish()
 
                              } else {
-
 
                                  val dashboardIntent = Intent(this, RoleSelect::class.java)
                                  startActivity(dashboardIntent)

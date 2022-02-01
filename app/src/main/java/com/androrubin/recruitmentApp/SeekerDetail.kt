@@ -18,6 +18,7 @@ class SeekerDetail : AppCompatActivity() {
 
         mAuth = FirebaseAuth.getInstance()
         val logout = findViewById<Button>(R.id.logout_btn)
+        val profile = findViewById<Button>(R.id.profileBtn)
 
         logout.setOnClickListener {
             Toast.makeText(applicationContext,"User logged out ", Toast.LENGTH_SHORT).show()
@@ -25,6 +26,10 @@ class SeekerDetail : AppCompatActivity() {
             val intent = Intent(this,Login_Activity::class.java)
             startActivity(intent)
             finish()
+        }
+        profile.setOnClickListener {
+            val intent = Intent(this,SeekerProfileView::class.java)
+            startActivity(intent)
         }
     }
 }

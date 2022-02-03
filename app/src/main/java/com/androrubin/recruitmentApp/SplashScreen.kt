@@ -33,19 +33,26 @@ import com.google.firebase.firestore.*
                          .addOnSuccessListener {
 
                              //Returns value of corresponding field
-                             var a = it["Role"].toString()
+                             val a = it["Role"].toString()
+                             val b = it["ProfileCreated"].toString()
 
 
-                             if (a== "Recruiter") {
+                             if (a== "Recruiter" && b=="1") {
 
 
                                  val dashboardIntent = Intent(this, RecruiterDetail::class.java)
                                  startActivity(dashboardIntent)
                                  finish()
 
-                             }else if (a== "Job Seeker") {
+                             }else if (a== "Job Seeker" && b=="1") {
 
-                                 val dashboardIntent = Intent(this,SeekerDetail::class.java)
+                                 val dashboardIntent = Intent(this,MainActivity::class.java)
+                                 startActivity(dashboardIntent)
+                                 finish()
+
+                             }else if (a== "Job Seeker" && b!="1") {
+
+                                 val dashboardIntent = Intent(this,SeekerCreateProfile::class.java)
                                  startActivity(dashboardIntent)
                                  finish()
 

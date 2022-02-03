@@ -73,9 +73,9 @@
 
                 <ImageView
                     android:id="@+id/profilePic"
-                    android:scaleType="centerCrop"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
                     app:srcCompat="@drawable/missing_profile_photo" />
             </androidx.cardview.widget.CardView>
         </androidx.cardview.widget.CardView>
@@ -85,12 +85,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:drawablePadding="4dp"
-            android:text="abhishekbhartirocks1@gmail.com"
             android:textColor="@color/black"
             android:textSize="18sp"
+            app:drawableStartCompat="@drawable/google"
             app:layout_constraintStart_toStartOf="@+id/textView5"
-            app:layout_constraintTop_toBottomOf="@+id/textView5"
-            app:drawableStartCompat="@drawable/google" />
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/editProfilePic"
@@ -118,17 +117,16 @@
             android:text="Edit Profile"
             android:textColor="@color/black"
             android:textSize="16sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView4"
             app:drawableStartCompat="@drawable/ic_profile_edit"
-            app:drawableTint="@color/black" />
+            app:drawableTint="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtName" />
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/txtName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="Abhishek Bharti"
             android:textColor="@color/black"
             android:textSize="30sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -136,29 +134,60 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/cardView3" />
 
-        <androidx.cardview.widget.CardView
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:cardCornerRadius="12dp"
-            android:layout_marginTop="60dp"
-            android:layout_marginBottom="5dp"
+            android:orientation="horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
-            android:contextClickable="true"
             app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtQualification">
+            app:layout_constraintTop_toBottomOf="@+id/txtRole">
 
-            <TextView
-                android:id="@+id/deleteAccount"
-                android:padding="10dp"
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="16sp"
-                android:textColor="@color/red"
-                android:drawableStart="@drawable/ic_delete"
-                android:text="Delete Account" />
-        </androidx.cardview.widget.CardView>
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:contextClickable="true"
+                app:cardCornerRadius="12dp">
+
+                <TextView
+                    android:id="@+id/deleteAccount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_delete"
+                    android:padding="10dp"
+                    android:text="Delete Account"
+                    android:textColor="@color/red"
+                    android:textSize="16sp" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:contextClickable="true"
+                app:cardCornerRadius="12dp">
+
+                <TextView
+                    android:id="@+id/logoutBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_logout"
+                    android:drawablePadding="4dp"
+                    android:drawableTint="#0C28C7"
+                    android:padding="10dp"
+                    android:text="Logout"
+                    android:textColor="#0C28C7"
+                    android:textSize="16sp" />
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
 
         <TextView
             android:id="@+id/textView9"
@@ -173,14 +202,13 @@
             android:id="@+id/txtPhone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="54546564656"
             android:drawablePadding="4dp"
             android:textColor="@color/black"
             android:textSize="18sp"
-            app:layout_constraintStart_toStartOf="@+id/textView9"
-            app:layout_constraintTop_toBottomOf="@+id/textView9"
             app:drawableStartCompat="@drawable/ic_phone"
-            app:drawableTint="@color/purple_500" />
+            app:drawableTint="@color/purple_500"
+            app:layout_constraintStart_toStartOf="@+id/textView9"
+            app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
         <TextView
             android:id="@+id/textView3"
@@ -194,22 +222,21 @@
         <TextView
             android:id="@+id/txtAddress"
             android:layout_width="wrap_content"
-            android:drawablePadding="4dp"
             android:layout_height="wrap_content"
-            android:text="Lucknow"
+            android:drawablePadding="4dp"
             android:textColor="@color/black"
             android:textSize="16sp"
-            app:layout_constraintStart_toStartOf="@+id/textView3"
-            app:layout_constraintTop_toBottomOf="@+id/textView3"
             app:drawableStartCompat="@drawable/ic_baseline_location_on_24"
-            app:drawableTint="@color/red" />
+            app:drawableTint="@color/red"
+            app:layout_constraintStart_toStartOf="@+id/textView3"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
         <TextView
             android:id="@+id/textView7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Qualification"
             android:layout_marginTop="8dp"
+            android:text="Qualification"
             app:layout_constraintStart_toStartOf="@+id/txtAddress"
             app:layout_constraintTop_toBottomOf="@+id/txtAddress" />
 
@@ -217,13 +244,12 @@
             android:id="@+id/txtQualification"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="B.Tech"
             android:drawablePadding="4dp"
-            android:textSize="16sp"
             android:textColor="@color/black"
+            android:textSize="16sp"
+            app:drawableStartCompat="@drawable/ic_grad_cap"
             app:layout_constraintStart_toStartOf="@+id/textView7"
-            app:layout_constraintTop_toBottomOf="@+id/textView7"
-            app:drawableStartCompat="@drawable/ic_grad_cap" />
+            app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
         <TextView
             android:id="@+id/textView6"
@@ -235,17 +261,17 @@
             app:layout_constraintTop_toBottomOf="@+id/txtQualification" />
 
         <TextView
-            android:id="@+id/textView8"
+            android:id="@+id/txtRole"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Recruiter"
             android:drawablePadding="4dp"
-            android:textSize="16sp"
             android:textColor="@color/black"
-            app:layout_constraintStart_toStartOf="@+id/textView6"
-            app:layout_constraintTop_toBottomOf="@+id/textView6"
+            android:textSize="16sp"
             app:drawableStartCompat="@drawable/ic_role_icon"
-            app:drawableTint="#4CAF50"/>
+            app:drawableTint="#4CAF50"
+            app:layout_constraintStart_toStartOf="@+id/textView6"
+            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

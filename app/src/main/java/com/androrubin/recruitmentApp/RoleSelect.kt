@@ -29,8 +29,9 @@ class RoleSelect : AppCompatActivity() {
 
             val data = hashMapOf(
                 "Role" to "Job Seeker",
-                "LinkProfilePic" to "",
-                "LinkBannerPic" to ""
+                "LinkProfilePic" to null,
+                "LinkBannerPic" to null,
+                "ProfileCreated" to 0
             )
             db.collection("Users").document("$name")
                 .set(data)
@@ -40,14 +41,30 @@ class RoleSelect : AppCompatActivity() {
                 .addOnFailureListener { e ->
                     Log.w("Data Addition", "Error adding document", e)
                 }
-            startActivity(Intent(this,SeekerDetail::class.java))
-            finish()
+            db.collection("Users").document("$name")
+                .get()
+                .addOnSuccessListener {
 
+                    //Returns value of corresponding field
+                    val b = it["ProfileCreated"].toString()
+                    if(b=="1"){
+                        startActivity(Intent(this, MainActivity::class.java))
+                        finish()
+                    }
+                    else{
+                        startActivity(Intent(this, SeekerCreateProfile::class.java))
+                        finish()
+                    }
+
+                }
         }
         recruiterBtn.setOnClickListener {
 
             val data = hashMapOf(
-                "Role" to "Recruiter"
+                "Role" to "Recruiter",
+                "LinkProfilePic" to null,
+                "LinkBannerPic" to null,
+                "ProfileCreated" to 0
             )
             db.collection("Users").document("$name")
                 .set(data)

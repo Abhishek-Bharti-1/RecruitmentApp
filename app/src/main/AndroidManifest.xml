@@ -13,6 +13,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RecruitmentApp">
         <activity
+            android:name=".SeekerCreateProfile"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
             android:name=".UploadPhoto"
             android:exported="false" />
         <activity
@@ -22,10 +28,6 @@
             android:name=".RecruiterDetail"
             android:exported="false"
             android:label="Recruiter Detail" />
-        <activity
-            android:name=".SeekerDetail"
-            android:exported="false"
-            android:label="Seeker Detail" />
         <activity
             android:name=".RoleSelect"
             android:exported="false"

@@ -4,24 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
+    android:backgroundTint="#EEEFF8"
     tools:context=".RoleSelect">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="272dp"
-        android:gravity="center"
-        android:text="Select Your Role"
-        android:textColor="@color/black"
-        android:textSize="40sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -31,18 +19,103 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <Button
-            android:id="@+id/seekerBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="40dp"
-            android:text="Job Seeker" />
-
-        <Button
-            android:id="@+id/recruiterBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Recruiter" />
     </LinearLayout>
+
+    <android.widget.Button
+        android:id="@+id/recruiterBtn"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="142dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="55dp"
+        android:background="@drawable/custom_button"
+        android:fontFamily="@font/isidora_semi_bold"
+        android:text="Recruiter"
+        android:textColor="#757DC6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.707"
+        app:layout_constraintStart_toEndOf="@+id/seekerBtn"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <android.widget.Button
+        android:id="@+id/seekerBtn"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="142dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/custom_button"
+        android:fontFamily="@font/isidora_semi_bold"
+        android:text="Job Seeker"
+        android:textColor="#757DC6"
+        app:layout_constraintEnd_toStartOf="@+id/recruiterBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="403dp"
+        android:fontFamily="@font/isidora_semi_bold"
+        android:text="Hello there!"
+        android:textColor="#6B6E8D"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:fontFamily="@font/isidora_semi_bold"
+        android:text="choose your role"
+        android:textColor="#555FB9"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/txtRole"
+        android:layout_width="100dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="sans-serif-thin"
+        android:gravity="center"
+        android:text="   I want a   opportunity!"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/seekerBtn"
+        app:layout_constraintTop_toBottomOf="@+id/seekerBtn" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="111dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="sans-serif-thin"
+        android:gravity="center"
+        android:text="I want to give a             opportunity!"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.297"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/recruiterBtn" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/hhhhhh_removebg_preview" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

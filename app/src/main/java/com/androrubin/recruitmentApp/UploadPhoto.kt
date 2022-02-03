@@ -24,6 +24,8 @@ class UploadPhoto : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_upload_photo)
 
+        supportActionBar?.hide()
+
         val mSelectedImageFileUri = intent.getStringExtra("ImageLink")?.toUri()
         val x = intent.getStringExtra("PictureType")
 
@@ -44,7 +46,7 @@ class UploadPhoto : AppCompatActivity() {
                     .getType(mSelectedImageFileUri!!))
 
                 val sRef : StorageReference = FirebaseStorage.getInstance().reference
-                    .child("Image "+System.currentTimeMillis() + "." + imageExtension)
+                    .child("$name/ image "+System.currentTimeMillis() + "." + imageExtension)
 
                 sRef.putFile(mSelectedImageFileUri!!)
                     .addOnSuccessListener { taskSnapshot ->
@@ -82,7 +84,7 @@ class UploadPhoto : AppCompatActivity() {
                                 }
                                 val intent = Intent(this,SeekerProfileView::class.java)
                                 startActivity(intent)
-                                finishAffinity()
+                                finish()
 
                             }.addOnFailureListener {
                                 Toast.makeText(this,it.message, Toast.LENGTH_LONG).show()

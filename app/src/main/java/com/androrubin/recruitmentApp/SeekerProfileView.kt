@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
 import android.util.Log
+import android.view.View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
 import android.webkit.MimeTypeMap
 import android.widget.ImageView
 import android.widget.TextView
@@ -21,6 +22,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
+import kotlinx.android.synthetic.main.activity_seeker_profile_view.*
 import java.io.IOException
 import kotlin.time.toDuration
 
@@ -36,6 +38,8 @@ class SeekerProfileView : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_seeker_profile_view)
+
+        supportActionBar?.title="Profile"
 
         val deleteAccount = findViewById<TextView>(R.id.deleteAccount)
         val editProfilePic = findViewById<FloatingActionButton>(R.id.editProfilePic)
@@ -53,19 +57,47 @@ class SeekerProfileView : AppCompatActivity() {
             .addOnSuccessListener {
 
                 //Returns value of corresponding field
-                var a = it["LinkBannerPic"].toString()
-                var b = it["LinkProfilePic"].toString()
+                val a = it["LinkBannerPic"].toString()
+                val b = it["LinkProfilePic"].toString()
+                val c = it["Role"].toString()
                 if(a != "")
                 {
                     Glide.with(this).load(a).into(bannerPic)
                 }
-                if(b!="")
+                if(b!= "")
                 {
                     Glide.with(this).load(b).into(profilePic)
                 }
+                txtRole.text = c
+            }
+        db.collection("Seekers").document("$name")
+            .get()
+            .addOnSuccessListener {
 
+                //Returns value of corresponding field
+                val l = it["Name"].toString()
+                val m = it["Email Id"].toString()
+                val n = it["Phone Number"].toString()
+                val o = it["Address"].toString()
+                val p= it["Qualification"].toString()
+
+                if(l != "" && m != "" && n != "" && o != "" && p != ""){
+                    txtName.text = l
+                    txtEmail.text = m
+                    txtPhone.text = n
+                    txtAddress.text = o
+                    txtQualification.text = p
+                }
             }
 
+
+        logoutBtn.setOnClickListener {
+            Toast.makeText(applicationContext,"User logged out ", Toast.LENGTH_SHORT).show()
+            mAuth.signOut()
+            val intent = Intent(this,Login_Activity::class.java)
+            startActivity(intent)
+            finish()
+        }
 
         deleteAccount.setOnClickListener {
             Toast.makeText(this,"Clicked Delete Account Button", Toast.LENGTH_SHORT).show()
@@ -168,5 +200,10 @@ class SeekerProfileView : AppCompatActivity() {
                 }
             }
         }
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        finish()
     }
 }

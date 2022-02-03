@@ -8,13 +8,13 @@ import com.androrubin.recruitmentApp.fragments.DashboardFragment
 import com.androrubin.recruitmentApp.fragments.HomeFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class MainActivity : AppCompatActivity() {
+class SeekerMainActivity : AppCompatActivity() {
 
     private lateinit var bottomNavigationView: BottomNavigationView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_seeker_main)
 
         val homeFragment = HomeFragment()
         val dashboardFragment = DashboardFragment()

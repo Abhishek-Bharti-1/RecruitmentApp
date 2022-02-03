@@ -13,10 +13,28 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RecruitmentApp">
         <activity
+            android:name=".Vacancy_details"
+            android:exported="false" />
+        <activity
+            android:name=".Create_vacancy"
+            android:exported="false" />
+        <activity
+            android:name=".RecruiterInfoInput"
+            android:exported="true" />
+        <activity
+            android:name=".RecruiterProfile"
+            android:exported="true" />
+        <activity
+            android:name=".RecruiterMainPage"
+            android:exported="true" />
+        <activity
+            android:name=".EditRecruiterProfile"
+            android:exported="false" />
+        <activity
             android:name=".SeekerCreateProfile"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".SeekerMainActivity"
             android:exported="false" />
         <activity
             android:name=".UploadPhoto"
@@ -24,10 +42,6 @@
         <activity
             android:name=".SeekerProfileView"
             android:exported="false" />
-        <activity
-            android:name=".RecruiterDetail"
-            android:exported="false"
-            android:label="Recruiter Detail" />
         <activity
             android:name=".RoleSelect"
             android:exported="false"

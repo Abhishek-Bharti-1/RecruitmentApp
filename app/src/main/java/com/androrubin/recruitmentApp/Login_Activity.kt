@@ -39,8 +39,6 @@ class Login_Activity : AppCompatActivity() {
         sign_in_btn.setOnClickListener {
             signIn()
         }
-
-
     }
 
     private fun signIn() {
@@ -96,19 +94,25 @@ class Login_Activity : AppCompatActivity() {
                             if (a== "Recruiter" && b=="1") {
 
 
-                                val dashboardIntent = Intent(this, RecruiterDetail::class.java)
+                                val dashboardIntent = Intent(this, RecruiterMainPage::class.java)
                                 startActivity(dashboardIntent)
                                 finish()
 
                             }else if (a== "Job Seeker" && b=="1") {
 
-                                val dashboardIntent = Intent(this,MainActivity::class.java)
+                                val dashboardIntent = Intent(this,SeekerMainActivity::class.java)
                                 startActivity(dashboardIntent)
                                 finish()
 
                             }else if (a== "Job Seeker" && b!="1") {
 
                                 val dashboardIntent = Intent(this,SeekerCreateProfile::class.java)
+                                startActivity(dashboardIntent)
+                                finish()
+
+                            }else if (a== "Recruiter" && b!="1") {
+
+                                val dashboardIntent = Intent(this,RecruiterInfoInput::class.java)
                                 startActivity(dashboardIntent)
                                 finish()
 

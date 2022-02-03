@@ -29,8 +29,8 @@ class RoleSelect : AppCompatActivity() {
 
             val data = hashMapOf(
                 "Role" to "Job Seeker",
-                "LinkProfilePic" to null,
-                "LinkBannerPic" to null,
+                "LinkProfilePic" to "",
+                "LinkBannerPic" to "",
                 "ProfileCreated" to 0
             )
             db.collection("Users").document("$name")
@@ -48,7 +48,7 @@ class RoleSelect : AppCompatActivity() {
                     //Returns value of corresponding field
                     val b = it["ProfileCreated"].toString()
                     if(b=="1"){
-                        startActivity(Intent(this, MainActivity::class.java))
+                        startActivity(Intent(this, SeekerMainActivity::class.java))
                         finish()
                     }
                     else{
@@ -62,8 +62,8 @@ class RoleSelect : AppCompatActivity() {
 
             val data = hashMapOf(
                 "Role" to "Recruiter",
-                "LinkProfilePic" to null,
-                "LinkBannerPic" to null,
+                "LinkProfilePic" to "",
+                "LinkBannerPic" to "",
                 "ProfileCreated" to 0
             )
             db.collection("Users").document("$name")
@@ -74,8 +74,21 @@ class RoleSelect : AppCompatActivity() {
                 .addOnFailureListener { e ->
                     Log.w("Data Addition", "Error adding document", e)
                 }
-            startActivity(Intent(this,RecruiterDetail::class.java))
-            finish()
+            db.collection("Users").document("$name")
+                .get()
+                .addOnSuccessListener {
+
+                    //Returns value of corresponding field
+                    val b = it["ProfileCreated"].toString()
+                    if(b=="1"){
+                        startActivity(Intent(this, RecruiterMainPage::class.java))
+                        finish()
+                    }
+                    else{
+                        startActivity(Intent(this, RecruiterInfoInput::class.java))
+                        finish()
+                    }
+                }
         }
     }
 }

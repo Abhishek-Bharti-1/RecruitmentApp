@@ -74,7 +74,7 @@ class SeekerCreateProfile : AppCompatActivity() {
                     .addOnFailureListener { e ->
                         Log.w("Data Addition", "Error adding document", e)
                     }
-            startActivity(Intent(this,MainActivity::class.java))
+            startActivity(Intent(this,SeekerMainActivity::class.java))
             finish()
             }
         }

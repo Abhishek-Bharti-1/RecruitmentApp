@@ -96,7 +96,7 @@ class SeekerProfileView : AppCompatActivity() {
             mAuth.signOut()
             val intent = Intent(this,Login_Activity::class.java)
             startActivity(intent)
-            finish()
+            finishAffinity()
         }
 
         deleteAccount.setOnClickListener {
@@ -169,6 +169,7 @@ class SeekerProfileView : AppCompatActivity() {
                         intent.putExtra("ImageLink",mSelectedImageFileUri.toString())
                         intent.putExtra("PictureType","1")
                         startActivity(intent)
+                        finish()
 
                     }
                     catch (e: IOException){
@@ -190,6 +191,7 @@ class SeekerProfileView : AppCompatActivity() {
                         intent.putExtra("ImageLink",mSelectedImageFileUri.toString())
                         intent.putExtra("PictureType","2")
                         startActivity(intent)
+                        finish()
 
                     } catch (e: IOException) {
 

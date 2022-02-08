@@ -5,49 +5,29 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.google.android.material.chip.Chip
-        android:id="@+id/btn_profilepage"
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/recruiter_bottomnav"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Profie Page"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="24dp"
-        app:chipBackgroundColor="#311b92"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_jobcreate" />
-
-    <com.google.android.material.chip.Chip
-        android:id="@+id/btn_jobcreate"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="99dp"
-        android:text="Create Job Vacancy"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="24dp"
-        app:chipBackgroundColor="#311b92"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/recruiter_bottom_nav" />
 
-    <com.google.android.material.chip.Chip
-        android:id="@+id/btn_postView"
+
+    <fragment
+        android:id="@+id/fragmentContainerView"
+        android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Vacancy Posts"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="24dp"
-        app:chipBackgroundColor="#311b92"
-        app:layout_constraintBottom_toTopOf="@+id/btn_jobcreate"
+        android:layout_height="0dp"
+        app:defaultNavHost="true"
+        app:layout_constraintBottom_toTopOf="@+id/recruiter_bottomnav"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:navGraph="@navigation/recruiter_nav"
+        tools:ignore="FragmentTagUsage" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

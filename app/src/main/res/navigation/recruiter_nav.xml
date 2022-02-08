@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/recruiter_nav"
+    app:startDestination="@id/recruiterMainPageFragment">
+
+    <fragment
+        android:id="@+id/recruiterProfileFragment"
+        android:name="com.androrubin.recruitmentApp.RecruiterProfileFragment"
+        android:label="fragment_recruiter_profile"
+        tools:layout="@layout/fragment_recruiter_profile" />
+    <fragment
+        android:id="@+id/recruiterCreateJobFragment"
+        android:name="com.androrubin.recruitmentApp.RecruiterCreateJobFragment"
+        android:label="fragment_recruiter_create_job"
+        tools:layout="@layout/fragment_recruiter_create_job" >
+        <action
+            android:id="@+id/action_recruiterCreateJobFragment_to_recruiterMainPageFragment"
+            app:destination="@id/recruiterMainPageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/recruiterMainPageFragment"
+        android:name="com.androrubin.recruitmentApp.RecruiterMainPageFragment"
+        android:label="fragment_recruiter_main_page"
+        tools:layout="@layout/fragment_recruiter_main_page" >
+        <action
+            android:id="@+id/action_recruiterMainPageFragment_to_recruiterProfileFragment"
+            app:destination="@id/recruiterProfileFragment" />
+    </fragment>
+</navigation>

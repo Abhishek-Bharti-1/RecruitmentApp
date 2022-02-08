@@ -26,6 +26,7 @@ class Login_Activity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
         supportActionBar?.hide()
+
          //Configure Google Sign In
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             .requestIdToken(getString(R.string.default_web_client_id))
@@ -41,6 +42,8 @@ class Login_Activity : AppCompatActivity() {
         }
     }
 
+    override fun onBackPressed() {
+    }
     private fun signIn() {
         val signInIntent = googleSignInClient.signInIntent
         googleSignInClient.signOut();

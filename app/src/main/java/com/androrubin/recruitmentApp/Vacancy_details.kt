@@ -23,6 +23,7 @@ class Vacancy_details : AppCompatActivity() {
         recyclerView= findViewById(R.id.recyclerView1)
         recyclerView.layoutManager= LinearLayoutManager(this)
         recyclerView.setHasFixedSize(true)
+        recyclerView.setHasFixedSize(true)
 
         //  searchArrayList = arrayListOf<Details>()
 

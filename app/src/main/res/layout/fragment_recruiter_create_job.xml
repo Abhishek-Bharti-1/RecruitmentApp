@@ -5,9 +5,13 @@
     android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".Create_vacancy"
+    tools:context=".RecruiterCreateJobFragment"
     xmlns:tools="http://schemas.android.com/tools"
     android:fillViewport="true"
+    android:layout_marginTop="8dp"
+    android:layout_marginLeft="4dp"
+    android:layout_marginRight="4dp"
+    android:layout_marginBottom="8dp"
     >
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -33,7 +37,7 @@
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/post1"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="366dp"
+            android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="20dp"
@@ -53,7 +57,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/post_text1"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:hint="Post(max limit 30 char)"
                 android:maxLength="31"/>
 
@@ -62,7 +66,7 @@
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/company_name"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="366dp"
+            android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="15dp"
@@ -86,7 +90,7 @@
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:id="@+id/s_range"
-            android:layout_width="366dp"
+            android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="15dp"
@@ -110,7 +114,7 @@
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:id="@+id/J_des"
-            android:layout_width="366dp"
+            android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="15dp"
@@ -136,7 +140,7 @@
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/Work_time"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="366dp"
+            android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="15dp"
@@ -160,7 +164,7 @@
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:id="@+id/M_qual"
-            android:layout_width="366dp"
+            android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="15dp"
@@ -184,7 +188,7 @@
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:id="@+id/E_lay"
-            android:layout_width="366dp"
+            android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="15dp"
@@ -206,7 +210,7 @@
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:id="@+id/Skill_lay"
-            android:layout_width="366dp"
+            android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="15dp"
@@ -229,7 +233,7 @@
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:id="@+id/Comadrs_lay"
-            android:layout_width="359dp"
+            android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="15dp"

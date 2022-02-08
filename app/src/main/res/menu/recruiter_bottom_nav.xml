@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Home"
+        android:id="@+id/recruiterMainPageFragment"
+        android:icon="@drawable/ic_home"/>
+
+    <item android:title="Create Vacancy"
+        android:id="@+id/recruiterCreateJobFragment"
+        android:icon="@drawable/ic_baseline_post_add_24"/>
+
+    <item android:title="Profile"
+        android:icon="@drawable/ic_action_post"
+        android:id="@+id/recruiterProfileFragment"/>
+
+</menu>

@@ -24,32 +24,43 @@ class EditRecruiterProfile : AppCompatActivity() {
         mAuth= FirebaseAuth.getInstance()
         val currentUser=mAuth.currentUser
 
-
         //Getting TextViews from Profile Page
         val compname=findViewById<EditText>(R.id.et_name_edit)
-        compname.setText(intent.getStringExtra("Extra_Name"))
         val compaddress=findViewById<EditText>(R.id.et_address_edit)
-        compaddress.setText(intent.getStringExtra("Extra_Address"))
         val compemail=findViewById<EditText>(R.id.et_email_edit)
-        compemail.setText(intent.getStringExtra("Extra_Email"))
         val compcontact=findViewById<EditText>(R.id.et_contactno_edit)
-        compcontact.setText(intent.getStringExtra("Extra_Contact"))
 
         //Getting Checkbox from Profile Page
         val cbhealth=findViewById<CheckBox>(R.id.cbhealth)
-        cbhealth.isChecked=intent.getBooleanExtra("Extra_Health",false)
         val cbedu=findViewById<CheckBox>(R.id.cbedu)
-        cbedu.isChecked=intent.getBooleanExtra("Extra_Education",false)
         val cbconsult=findViewById<CheckBox>(R.id.cbconsult)
-        cbconsult.isChecked=intent.getBooleanExtra("Extra_Consultance",false)
         val cbtypist=findViewById<CheckBox>(R.id.cbtypist)
-        cbtypist.isChecked=intent.getBooleanExtra("Extra_Typist",false)
         val cbsoft=findViewById<CheckBox>(R.id.cbsoft)
-        cbsoft.isChecked=intent.getBooleanExtra("Extra_Software",false)
 
         //Saving edited data to Firebase
         val name=currentUser?.displayName
         val save=findViewById<Button>(R.id.btn_save_edit)
+
+        db.collection("Recruiter").document("$name")
+            .get()
+            .addOnSuccessListener {
+                var name=it["company name"].toString()
+                var address=it["company address"].toString()
+                var email=it["company email"].toString()
+                var contact=it["company contact"].toString()
+                cbhealth.isChecked= it["cbhealth"] as Boolean
+                cbconsult.isChecked=it["cbconsult"] as Boolean
+                cbedu.isChecked=it["cbedu"] as Boolean
+                cbtypist.isChecked=it["cbtypist"] as Boolean
+                cbsoft.isChecked=it["cbsoftware"] as Boolean
+
+                compaddress.setText(address)
+                compemail.setText(email)
+                compcontact.setText(contact)
+                compname.setText(name)
+
+
+            }
 
         save?.setOnClickListener{
             val cbhealth=cbhealth.isChecked
@@ -73,6 +84,7 @@ class EditRecruiterProfile : AppCompatActivity() {
                     "cbtypist" to cbtypist,
                     "cbsoftware" to cbsoftware
                 )
+
                 db.collection("Recruiter").document("$name")
                     .set(data)
                     .addOnSuccessListener { docRef ->
@@ -81,7 +93,7 @@ class EditRecruiterProfile : AppCompatActivity() {
                     .addOnFailureListener { e ->
                         Log.w("Data Addition", "Error adding document", e)
                     }
-                Intent(this,RecruiterProfile::class.java).also {
+                Intent(this,RecruiterMainPage::class.java).also {
                     Toast.makeText(this,"Profile Updated",Toast.LENGTH_SHORT).show()
                     startActivity(it)
                     finish()

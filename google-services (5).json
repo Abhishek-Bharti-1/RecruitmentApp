@@ -1,0 +1,80 @@
+{
+  "project_info": {
+    "project_number": "886209242718",
+    "firebase_url": "https://recruitmentapp-da180-default-rtdb.firebaseio.com",
+    "project_id": "recruitmentapp-da180",
+    "storage_bucket": "recruitmentapp-da180.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:886209242718:android:68cd7db7e7b6f4cfbff6cf",
+        "android_client_info": {
+          "package_name": "com.androrubin.recruitmentApp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "886209242718-4mv2jjrnln5lum1cub05420c3sd39rd8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.androrubin.recruitmentApp",
+            "certificate_hash": "144fbab301384733907202965df1ed8e1782f2fc"
+          }
+        },
+        {
+          "client_id": "886209242718-664jhdvt935su5uipje56j8s6v97hdr2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.androrubin.recruitmentApp",
+            "certificate_hash": "ad7c770d6aad2f6465ad38c5d724a2c13ed36571"
+          }
+        },
+        {
+          "client_id": "886209242718-an9etmu0t4vcuu5r942md5u5i7hd6ceg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.androrubin.recruitmentApp",
+            "certificate_hash": "f1eac1fb4b7f8c70da9845c60ef19b880479ecbb"
+          }
+        },
+        {
+          "client_id": "886209242718-h9fe7gccshvvldshtsk6001j32scn81q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.androrubin.recruitmentApp",
+            "certificate_hash": "9f9c3e39eb7704d7afa2b7e34253378c42a51043"
+          }
+        },
+        {
+          "client_id": "886209242718-rtbt9c33cn3a47dk2ugb88768q19kurd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.androrubin.recruitmentApp",
+            "certificate_hash": "1bf9851cf29d8adab309431b2c2c945f463d6b0e"
+          }
+        },
+        {
+          "client_id": "886209242718-gd5dvv7pclne05lkbdr8234v9egigf5t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPJG1f9xfKB7c5SHvHd9WJ5-pVu3rWhEk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "886209242718-gd5dvv7pclne05lkbdr8234v9egigf5t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

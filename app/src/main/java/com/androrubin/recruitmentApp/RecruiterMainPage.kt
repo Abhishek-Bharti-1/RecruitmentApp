@@ -2,31 +2,25 @@ package com.androrubin.recruitmentApp
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.commit
+import androidx.navigation.findNavController
+import androidx.navigation.ui.setupWithNavController
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.chip.Chip
 import kotlinx.android.synthetic.main.activity_recruiter_mainpage.*
 
 class RecruiterMainPage:AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         setContentView(R.layout.activity_recruiter_mainpage)
-        val btnprofile = findViewById<Chip>(R.id.btn_profilepage)
-
-        btn_postView.setOnClickListener {
-            Intent(this, Vacancy_details::class.java).also {
-                startActivity(it)
-            }
+        val  bottomNavigationView=findViewById<BottomNavigationView>(R.id.recruiter_bottomnav)
+        val navController=findNavController(R.id.fragmentContainerView)
+        bottomNavigationView.setupWithNavController(navController=navController)
         }
-        btnprofile.setOnClickListener {
-            Intent(this, RecruiterProfile::class.java).also {
-                startActivity(it)
-            }
-        }
-
-        btn_jobcreate.setOnClickListener {
-            Intent(this, Create_vacancy::class.java).also {
-                startActivity(it)
-            }
-        }
+    override fun onBackPressed() {
     }
-}
+
+    }

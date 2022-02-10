@@ -9,6 +9,7 @@
         android:id="@+id/btn_profilepage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
         android:text="Profie Page"
         android:textAlignment="center"
         android:textColor="@color/white"
@@ -21,9 +22,9 @@
 
     <com.google.android.material.chip.Chip
         android:id="@+id/btn_jobcreate"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="99dp"
+        android:layout_width="379dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="304dp"
         android:text="Create Job Vacancy"
         android:textAlignment="center"
         android:textColor="@color/white"
@@ -31,13 +32,13 @@
         app:chipBackgroundColor="#311b92"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.562"
         app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.material.chip.Chip
         android:id="@+id/btn_postView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="397dp"
+        android:layout_height="54dp"
         android:text="Vacancy Posts"
         android:textAlignment="center"
         android:textColor="@color/white"
@@ -48,6 +49,6 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.819" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

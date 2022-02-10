@@ -17,9 +17,10 @@
             android:id="@+id/cardView"
             android:layout_width="120dp"
             android:layout_height="120dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="16dp"
             app:cardCornerRadius="120dp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
@@ -37,10 +38,9 @@
             android:layout_marginTop="20dp"
             android:drawableStart="@drawable/ic_profile"
             android:drawablePadding="4dp"
-            android:drawableTint="#03B9A8"
+
             android:hint="Name"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/cardView"
             tools:ignore="TouchTargetSizeCheck" />
@@ -52,7 +52,7 @@
             android:layout_marginTop="16dp"
             android:inputType="number"
             android:drawablePadding="4dp"
-            android:drawableTint="@color/purple_700"
+
             android:hint="Phone Number"
             app:drawableStartCompat="@drawable/ic_phone"
             app:layout_constraintEnd_toEndOf="parent"
@@ -65,11 +65,11 @@
             android:id="@+id/edtEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="16dp"
             android:drawablePadding="4dp"
-            android:inputType="textEmailAddress"
             android:hint="Email id"
-            app:drawableStartCompat="@drawable/google"
+            android:inputType="textEmailAddress"
+            app:drawableStartCompat="@drawable/ic_vector"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/edtPhone"
@@ -83,7 +83,7 @@
             android:layout_marginTop="16dp"
             android:drawableStart="@drawable/ic_address"
             android:drawablePadding="4dp"
-            android:drawableTint="@color/red"
+
             android:hint="Address"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -109,15 +109,18 @@
             app:layout_constraintVertical_bias="0.0"
             tools:ignore="TouchTargetSizeCheck" />
 
-        <Button
+        <android.widget.Button
             android:id="@+id/btnSave"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="60dp"
-            android:background="@drawable/btn_background"
+            android:layout_width="142dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="64dp"
+            android:background="@drawable/custom_button_solid"
+            android:fontFamily="@font/isidora_semi_bold"
             android:text="SAVE"
+            android:textColor="@color/white"
+            android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintHorizontal_bias="0.458"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
@@ -137,7 +140,7 @@
             android:padding="4dp"
             android:text="Job Preference"
             android:textColor="@color/black"
-            android:textSize="18sp"
+            android:textSize="16sp"
             app:layout_constraintStart_toStartOf="@+id/edtQualifications"
             app:layout_constraintTop_toBottomOf="@+id/edtQualifications" />
 

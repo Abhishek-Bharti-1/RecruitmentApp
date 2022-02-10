@@ -6,15 +6,72 @@
     android:layout_height="match_parent"
     tools:context=".EditRecruiterProfile">
 
-    <Button
+    <android.widget.Button
         android:id="@+id/btn_save_edit"
+        android:layout_width="142dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="76dp"
+        android:background="@drawable/custom_button_solid"
+        android:fontFamily="@font/isidora_semi_bold"
+        android:text="Save"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.464"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/cbedu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="55dp"
-        android:text="Save"
-        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Education"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/cbsoft"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout8" />
+
+    <CheckBox
+        android:id="@+id/cbsoft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Software"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/cbtypist"
+        app:layout_constraintStart_toEndOf="@+id/cbedu"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout8" />
+
+    <CheckBox
+        android:id="@+id/cbconsult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="58dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Consultancy"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/cbhealth"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbedu" />
+
+    <CheckBox
+        android:id="@+id/cbhealth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="139dp"
+        android:text="Health "
+        android:fontFamily="@font/roboto_medium"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/linearLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/cbsoft" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout5"
@@ -22,16 +79,18 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.056">
+        app:layout_constraintVertical_bias="0.16000003">
 
         <androidx.appcompat.widget.AppCompatEditText
             android:id="@+id/et_name_edit"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:hint="Company Name"
+            android:fontFamily="@font/roboto"
+            android:hint="  Company Name"
+            android:drawableStart="@drawable/ic_address"
             tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
 
@@ -51,6 +110,7 @@
             android:id="@+id/et_email_edit"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:fontFamily="@font/roboto"
             android:hint="E-mail"
             tools:ignore="SpeakableTextPresentCheck" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -69,6 +129,7 @@
             android:id="@+id/et_address_edit"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:fontFamily="@font/roboto"
             android:hint="Address"
             tools:ignore="SpeakableTextPresentCheck" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -87,61 +148,39 @@
             android:id="@+id/et_contactno_edit"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:fontFamily="@font/roboto"
             android:hint="Contact-No"
             tools:ignore="SpeakableTextPresentCheck" />
+
     </com.google.android.material.textfield.TextInputLayout>
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_marginTop="32dp"
+    <CheckBox
+        android:id="@+id/cbtypist"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="182dp"
-        android:layout_marginStart="56dp"
-        android:orientation="vertical"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="59dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Typist"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cbsoft"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout8" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+
+        android:fontFamily="@font/roboto_bold"
+        android:text="Company Info"
+        android:textColor="#474B6D"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout8">
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <CheckBox
-            android:id="@+id/cbedu"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:text="Education"
-            android:textSize="24dp" />
-
-        <CheckBox
-            android:id="@+id/cbsoft"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:text="Software"
-            android:textSize="24dp" />
-
-        <CheckBox
-            android:id="@+id/cbconsult"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:text="Consultancy"
-            android:textSize="24dp" />
-
-        <CheckBox
-            android:id="@+id/cbtypist"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:text="Typist"
-            android:textSize="24dp" />
-
-        <CheckBox
-            android:id="@+id/cbhealth"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:text="Health "
-            android:textSize="24dp" />
-
-    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

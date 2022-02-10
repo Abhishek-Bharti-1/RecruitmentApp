@@ -3,6 +3,7 @@
     <array name="preloaded_fonts" translatable="false">
         <item>@font/amatic_sc_bold</item>
         <item>@font/fredoka_one</item>
+        <item>@font/roboto_bold</item>
         <item>@font/roboto_thin</item>
     </array>
 </resources>

@@ -13,20 +13,22 @@
     <androidx.constraintlayout.widget.ConstraintLayout
 
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
+        android:layout_height="match_parent">
 
         <TextView
             android:id="@+id/cv1"
             style="@style/Widget.AppCompat.TextView.SpinnerItem"
-            android:layout_width="158dp"
-            android:layout_height="0dp"
+            android:layout_width="208dp"
+            android:layout_height="52dp"
             android:layout_marginTop="30dp"
+            android:fontFamily="@font/roboto_medium"
             android:gravity="center"
             android:text="Create Vacancy"
+            android:textColor="#474b6d"
+            android:textSize="24sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.09"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -39,23 +41,24 @@
             android:layout_marginTop="20dp"
             android:layout_marginEnd="20dp"
             android:hint="Post"
+            app:counterMaxLength="30"
+            app:endIconMode="clear_text"
+            app:errorIconDrawable="@drawable/ic_action_error"
             app:helperText="Required*"
             app:helperTextTextColor="#FF0000"
-            app:endIconMode="clear_text"
-            app:counterMaxLength="30"
-            app:errorIconDrawable="@drawable/ic_action_error"
             app:layout_constraintBottom_toTopOf="@+id/company_name"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/cv1"
-            app:startIconDrawable="@drawable/ic_action_post">
+            app:startIconTint="#555FB9"
+            app:startIconDrawable="@drawable/ic_profile">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/post_text1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Post(max limit 30 char)"
-                android:maxLength="31"/>
+                android:maxLength="31" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -68,13 +71,14 @@
             android:layout_marginTop="15dp"
             android:layout_marginEnd="20dp"
             android:hint="company name"
+            app:endIconMode="clear_text"
+            app:startIconTint="#555FB9"
             app:helperText="Required*"
             app:helperTextTextColor="#FF0000"
-            app:endIconMode="clear_text"
-            app:startIconDrawable="@drawable/ic_action_com"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/post1">
+            app:layout_constraintTop_toBottomOf="@+id/post1"
+            app:startIconDrawable="@drawable/ic_address">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/c_name"
@@ -84,8 +88,8 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:id="@+id/s_range"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="366dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
@@ -93,10 +97,11 @@
             android:layout_marginEnd="20dp"
             android:hint="Salary range"
             app:endIconMode="clear_text"
-            app:startIconDrawable="@drawable/sal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/company_name">
+            app:layout_constraintTop_toBottomOf="@+id/company_name"
+            app:startIconTint="#555FB9"
+            app:startIconDrawable="@drawable/ic_salary">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/salary_range"
@@ -108,29 +113,29 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:id="@+id/J_des"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="366dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="15dp"
             android:layout_marginEnd="20dp"
             android:hint="Job Description"
+            app:startIconTint="#555FB9"
             app:counterMaxLength="150"
             app:endIconMode="clear_text"
-            app:startIconDrawable="@drawable/ic_action_des"
             app:errorIconDrawable="@drawable/ic_action_error"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/s_range">
+            app:layout_constraintTop_toBottomOf="@+id/s_range"
+            app:startIconDrawable="@drawable/ic_job_description">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/job_des"
-                android:hint="Job Description(max limit 150 char)"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:maxLength="151"
-                />
+                android:hint="Job Description(max limit 150 char)"
+                android:maxLength="151" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -141,71 +146,73 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="15dp"
             android:layout_marginEnd="20dp"
-            app:helperText="Required*"
-            app:helperTextTextColor="#FF0000"
             android:hint="Working time"
             app:endIconMode="clear_text"
-            app:startIconDrawable="@drawable/ic_action_clock"
+            app:startIconTint="#555FB9"
+            app:helperText="Required*"
+            app:helperTextTextColor="#FF0000"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/J_des">
+            app:layout_constraintTop_toBottomOf="@+id/J_des"
+            app:startIconDrawable="@drawable/ic_clock">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/wrk_time"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                />
+                android:layout_height="wrap_content" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:id="@+id/M_qual"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="366dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="15dp"
             android:layout_marginEnd="20dp"
-            app:helperText="Required*"
-            app:helperTextTextColor="#FF0000"
+            app:startIconTint="#555FB9"
             android:hint="Minimum Qualifications"
-            app:startIconDrawable="@drawable/ic_action_qual"
             app:endIconMode="clear_text"
+            app:helperText="Required*"
+
+            app:helperTextTextColor="#FF0000"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/Work_time">
+            app:layout_constraintTop_toBottomOf="@+id/Work_time"
+            app:startIconDrawable="@drawable/ic_grad_cap">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/Min_qual"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                />
+                android:layout_height="wrap_content" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:id="@+id/E_lay"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="366dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="15dp"
             android:layout_marginEnd="20dp"
-            app:helperTextTextColor="#FF0000"
             android:hint="Experience"
+            app:startIconTint="#555FB9"
             app:endIconMode="clear_text"
+            app:helperTextTextColor="#FF0000"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            app:startIconDrawable="@drawable/ic_experince"
             app:layout_constraintTop_toBottomOf="@+id/M_qual">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/exp_txt"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                />
+                android:layout_height="wrap_content" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:id="@+id/Skill_lay"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="366dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
@@ -213,31 +220,34 @@
             android:layout_marginEnd="20dp"
             android:hint="Skill required"
             app:endIconMode="clear_text"
+            app:startIconTint="#555FB9"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            app:startIconDrawable="@drawable/ic_skills"
             app:layout_constraintTop_toBottomOf="@+id/E_lay">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/skill_txt"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                />
+                android:layout_height="wrap_content" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
 
         <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:id="@+id/Comadrs_lay"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="359dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="15dp"
             android:layout_marginEnd="20dp"
+            app:endIconMode="clear_text"
             app:helperText="Required*"
             app:helperTextTextColor="#FF0000"
-            app:endIconMode="clear_text"
             app:layout_constraintEnd_toEndOf="parent"
+            app:startIconDrawable="@drawable/ic_adress_location"
+            app:startIconTint="#555FB9"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/Skill_lay">
 
@@ -245,16 +255,21 @@
                 android:id="@+id/comadr_txt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+
                 android:hint="Complete Address" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <Button
+        <android.widget.Button
             android:id="@+id/sub_btn1"
-            android:layout_width="110dp"
+            android:layout_width="142dp"
             android:layout_height="50dp"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="102dp"
+            android:background="@drawable/custom_button_solid"
+            android:fontFamily="@font/isidora_semi_bold"
             android:text="Submit"
+            android:textColor="@color/white"
+            android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"

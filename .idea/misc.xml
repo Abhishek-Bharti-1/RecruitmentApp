@@ -27,6 +27,51 @@
         <entry key="..\:/RecruitmentApp/app/src/main/res/layout/fragment_home.xml" value="0.19791666666666666" />
         <entry key="..\:/RecruitmentApp/app/src/main/res/layout/fragment_profile.xml" value="0.40904198062432723" />
         <entry key="..\:/RecruitmentApp/app/src/main/res/menu/bottom_nav_menu.xml" value="0.19791666666666666" />
+        <entry key="..\:/Users/prash/AndroidStudioProjects/RecruitmentApp343/app/src/main/res/drawable-v24/btn_background.xml" value="0.259" />
+        <entry key="..\:/Users/prash/AndroidStudioProjects/RecruitmentApp343/app/src/main/res/drawable-v24/ic_address.xml" value="0.256" />
+        <entry key="..\:/Users/prash/AndroidStudioProjects/RecruitmentApp343/app/src/main/res/drawable-v24/ic_dashboard.xml" value="0.256" />
+        <entry key="..\:/Users/prash/AndroidStudioProjects/RecruitmentApp343/app/src/main/res/drawable-v24/ic_home.xml" value="0.256" />
+        <entry key="..\:/Users/prash/AndroidStudioProjects/RecruitmentApp343/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.256" />
+        <entry key="..\:/Users/prash/AndroidStudioProjects/RecruitmentApp343/app/src/main/res/drawable-v24/ic_profile.xml" value="0.256" />
+        <entry key="..\:/Users/prash/AndroidStudioProjects/RecruitmentApp343/app/src/main/res/drawable/custom_button.xml" value="0.256" />
+        <entry key="..\:/Users/prash/AndroidStudioProjects/RecruitmentApp343/app/src/main/res/drawable/custom_button_solid.xml" value="0.256" />
+        <entry key="..\:/Users/prash/AndroidStudioProjects/RecruitmentApp343/app/src/main/res/drawable/ic_adress_location.xml" value="0.22" />
+        <entry key="..\:/Users/prash/AndroidStudioProjects/RecruitmentApp343/app/src/main/res/drawable/ic_baseline_edit_24.xml" value="0.256" />
+        <entry key="..\:/Users/prash/AndroidStudioProjects/RecruitmentApp343/app/src/main/res/drawable/ic_baseline_location_on_24.xml" value="0.259" />
+        <entry key="..\:/Users/prash/AndroidStudioProjects/RecruitmentApp343/app/src/main/res/drawable/ic_clock.xml" value="0.181" />
+        <entry key="..\:/Users/prash/AndroidStudioProjects/RecruitmentApp343/app/src/main/res/drawable/ic_delete.xml" value="0.256" />
+        <entry key="..\:/Users/prash/AndroidStudioProjects/RecruitmentApp343/app/src/main/res/drawable/ic_edit.xml" value="0.256" />
+        <entry key="..\:/Users/prash/AndroidStudioProjects/RecruitmentApp343/app/src/main/res/drawable/ic_edit1.xml" value="0.256" />
+        <entry key="..\:/Users/prash/AndroidStudioProjects/RecruitmentApp343/app/src/main/res/drawable/ic_experince.xml" value="0.181" />
+        <entry key="..\:/Users/prash/AndroidStudioProjects/RecruitmentApp343/app/src/main/res/drawable/ic_grad_cap.xml" value="0.256" />
+        <entry key="..\:/Users/prash/AndroidStudioProjects/RecruitmentApp343/app/src/main/res/drawable/ic_job_description.xml" value="0.181" />
+        <entry key="..\:/Users/prash/AndroidStudioProjects/RecruitmentApp343/app/src/main/res/drawable/ic_launcher_background.xml" value="0.256" />
+        <entry key="..\:/Users/prash/AndroidStudioProjects/RecruitmentApp343/app/src/main/res/drawable/ic_logout.xml" value="0.256" />
+        <entry key="..\:/Users/prash/AndroidStudioProjects/RecruitmentApp343/app/src/main/res/drawable/ic_money.xml" value="0.243" />
+        <entry key="..\:/Users/prash/AndroidStudioProjects/RecruitmentApp343/app/src/main/res/drawable/ic_pen.xml" value="0.256" />
+        <entry key="..\:/Users/prash/AndroidStudioProjects/RecruitmentApp343/app/src/main/res/drawable/ic_phone.xml" value="0.256" />
+        <entry key="..\:/Users/prash/AndroidStudioProjects/RecruitmentApp343/app/src/main/res/drawable/ic_profile_edit.xml" value="0.256" />
+        <entry key="..\:/Users/prash/AndroidStudioProjects/RecruitmentApp343/app/src/main/res/drawable/ic_role_icon.xml" value="0.256" />
+        <entry key="..\:/Users/prash/AndroidStudioProjects/RecruitmentApp343/app/src/main/res/drawable/ic_salary.xml" value="0.243" />
+        <entry key="..\:/Users/prash/AndroidStudioProjects/RecruitmentApp343/app/src/main/res/drawable/ic_skills.xml" value="0.181" />
+        <entry key="..\:/Users/prash/AndroidStudioProjects/RecruitmentApp343/app/src/main/res/drawable/ic_upload.xml" value="0.256" />
+        <entry key="..\:/Users/prash/AndroidStudioProjects/RecruitmentApp343/app/src/main/res/drawable/ic_vector.xml" value="0.243" />
+        <entry key="..\:/Users/prash/AndroidStudioProjects/RecruitmentApp343/app/src/main/res/layout/activity_create_vacancy.xml" value="0.4" />
+        <entry key="..\:/Users/prash/AndroidStudioProjects/RecruitmentApp343/app/src/main/res/layout/activity_edit_recruiter_profile.xml" value="0.264" />
+        <entry key="..\:/Users/prash/AndroidStudioProjects/RecruitmentApp343/app/src/main/res/layout/activity_login.xml" value="0.25052083333333336" />
+        <entry key="..\:/Users/prash/AndroidStudioProjects/RecruitmentApp343/app/src/main/res/layout/activity_recruiter_detailfill.xml" value="0.264" />
+        <entry key="..\:/Users/prash/AndroidStudioProjects/RecruitmentApp343/app/src/main/res/layout/activity_recruiter_mainpage.xml" value="0.25052083333333336" />
+        <entry key="..\:/Users/prash/AndroidStudioProjects/RecruitmentApp343/app/src/main/res/layout/activity_recruiter_profile.xml" value="0.72" />
+        <entry key="..\:/Users/prash/AndroidStudioProjects/RecruitmentApp343/app/src/main/res/layout/activity_role_select.xml" value="0.264" />
+        <entry key="..\:/Users/prash/AndroidStudioProjects/RecruitmentApp343/app/src/main/res/layout/activity_seeker_create_profile.xml" value="0.4" />
+        <entry key="..\:/Users/prash/AndroidStudioProjects/RecruitmentApp343/app/src/main/res/layout/activity_seeker_main.xml" value="0.2128623188405797" />
+        <entry key="..\:/Users/prash/AndroidStudioProjects/RecruitmentApp343/app/src/main/res/layout/activity_seeker_profile_view.xml" value="0.4" />
+        <entry key="..\:/Users/prash/AndroidStudioProjects/RecruitmentApp343/app/src/main/res/layout/activity_splash.xml" value="0.264" />
+        <entry key="..\:/Users/prash/AndroidStudioProjects/RecruitmentApp343/app/src/main/res/layout/activity_upload_photo.xml" value="0.25052083333333336" />
+        <entry key="..\:/Users/prash/AndroidStudioProjects/RecruitmentApp343/app/src/main/res/layout/activity_vacancy_details.xml" value="0.25052083333333336" />
+        <entry key="..\:/Users/prash/AndroidStudioProjects/RecruitmentApp343/app/src/main/res/layout/fragment_dashboard.xml" value="0.25052083333333336" />
+        <entry key="..\:/Users/prash/AndroidStudioProjects/RecruitmentApp343/app/src/main/res/layout/fragment_home.xml" value="0.23385416666666667" />
+        <entry key="..\:/Users/prash/AndroidStudioProjects/RecruitmentApp343/app/src/main/res/layout/single_row.xml" value="0.536" />
       </map>
     </option>
   </component>

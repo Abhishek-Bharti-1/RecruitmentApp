@@ -9,27 +9,29 @@
         android:id="@+id/btn_edit"
         android:layout_width="52dp"
         android:layout_height="51dp"
+        android:layout_marginTop="608dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginStart="343dp"
-        android:layout_marginTop="5dp"
         android:minHeight="48dp"
         android:src="@drawable/ic_baseline_edit_24"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.39"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/tvcompanyname"
-        android:layout_width="259dp"
-        android:layout_height="60dp"
+        android:layout_width="252dp"
+        android:layout_height="44dp"
         android:layout_gravity="center"
-        android:layout_marginBottom="618dp"
         android:layout_marginTop="53dp"
+        android:layout_marginBottom="618dp"
         android:background="@color/white"
+        android:fontFamily="@font/roboto_bold"
         android:text="Company Name"
         android:textAlignment="center"
-        android:textSize="32dp"
+        android:textColor="#474b6d"
+        android:textSize="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -55,61 +57,66 @@
                 android:layout_width="187dp"
                 android:layout_height="match_parent"
                 android:layout_marginStart="8dp"
+                android:layout_marginTop="6dp"
                 android:text=" Domain of work :"
                 android:textAlignment="center"
-                android:layout_marginTop="6dp"
-                android:textSize="24dp" />
+                android:textColor="#6B6E8D"
+                android:textSize="16sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
+
                 <CheckBox
                     android:id="@+id/cbedu"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Education"
-                    android:textSize="24dp"
+                    android:layout_marginStart="8dp"
                     android:clickable="false"
                     android:focusable="false"
-                    android:layout_marginStart="8dp"/>
+                    android:text="Education"
+                    android:textSize="16sp" />
 
                 <CheckBox
                     android:id="@+id/cbsoft"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
-                    android:text="Software"
-                    android:textSize="24dp"
                     android:clickable="false"
-                    android:focusable="false"/>
+                    android:focusable="false"
+                    android:text="Software"
+                    android:textSize="16sp" />
+
                 <CheckBox
                     android:id="@+id/cbconsult"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
-                    android:text="Consultancy"
-                    android:textSize="24dp"
                     android:clickable="false"
-                    android:focusable="false"/>
+                    android:focusable="false"
+                    android:text="Consultancy"
+                    android:textSize="16sp" />
+
                 <CheckBox
                     android:id="@+id/cbtypist"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
-                    android:text="Typist"
-                    android:textSize="24dp"
                     android:clickable="false"
-                    android:focusable="false"/>
+                    android:focusable="false"
+                    android:text="Typist"
+                    android:textSize="16sp" />
+
                 <CheckBox
                     android:id="@+id/cbhealth"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Health "
                     android:layout_marginStart="8dp"
-                    android:textSize="24dp"
                     android:clickable="false"
-                    android:focusable="false"/>
+                    android:focusable="false"
+                    android:text="Health "
+                    android:textSize="16sp" />
 
             </LinearLayout>
 
@@ -124,20 +131,20 @@
                 android:layout_width="187dp"
                 android:layout_height="40dp"
                 android:layout_marginStart="8sp"
-                android:text="Office Location :"
                 android:layout_marginTop="8dp"
+                android:text="Office Location :"
                 android:textAlignment="center"
-                android:textSize="24dp" />
+                android:textColor="#6B6E8D"
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/tv_address"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="Address"
-                android:textSize="24dp"
                 android:layout_marginTop="8dp"
-                />
+                android:text="Address"
+                android:textSize="16sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -148,20 +155,21 @@
                 android:layout_width="187dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8sp"
-                android:text="Contact Details :"
-                android:textAlignment="center"
                 android:layout_marginTop="8dp"
-                android:textSize="24dp" />
+                android:text="Contact Details :"
+                android:textColor="#6B6E8D"
+                android:textAlignment="center"
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/tv_mobileno"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="Mobile No :"
                 android:layout_marginTop="8dp"
+                android:text="Mobile No :"
 
-                android:textSize="24dp" />
+                android:textSize="16sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -170,14 +178,14 @@
 
             <TextView
                 android:layout_width="187dp"
-                android:layout_marginTop="8dp"
                 android:layout_height="match_parent"
                 android:layout_marginStart="8sp"
+                android:layout_marginTop="8dp"
                 android:text="Contact E-Mail :"
-
+                android:textColor="#6B6E8D"
                 android:textAlignment="center"
 
-                android:textSize="24dp" />
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/tv_email"
@@ -186,22 +194,25 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:text=" Hello"
-                android:textSize="24dp" />
+                android:textSize="16dp" />
         </LinearLayout>
 
 
     </LinearLayout>
 
-    <Button
+    <android.widget.Button
         android:id="@+id/logout_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="96dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginStart="286dp"
+        android:layout_marginBottom="72dp"
+        android:background="@drawable/custom_button_solid"
+        android:fontFamily="@font/isidora_semi_bold"
         android:text="Logout"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.707"
         app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
